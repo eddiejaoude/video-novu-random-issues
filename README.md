@@ -253,7 +253,7 @@ At this time here are the supported providers...
 
 Click on `Connect` for the provider you wish to integrate with. In my case I am using Mailgun and I fill in the private keys provided by Mailgun.
 
-![Novu providers](docs/images/2b-novu-integrations-keys.png)
+![Novu providers](docs/images/2b-novu-integration-keys.png)
 
 After submitting the form, you will see on the integration page that now we have 1 integration. You can add more as you require.
 
