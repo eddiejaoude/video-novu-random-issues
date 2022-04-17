@@ -303,18 +303,24 @@ NOVU_TOKEN=<your-private-novu-token>
 
 Now that the Novu object is ready to be used, we can create a new notification. We will use the `forEach` function to loop through each user. 
 
-The email trigger needs the notification name for the first parameter then the 2nd parameter is an object that will contain the required fields `$user_id`, `$email` and any additional parameters we want to use in the template on the Novu platform.
+The email trigger needs the notification name for the first parameter then the 2nd parameter is an object that will contain the required fields: 
+- **`to`** - Will contain the recipient information, it can either be an object or an array of objects. Which will contain the `subscriberId` and the `email` or `phone` credentials.
+- **`payload`** - Any additional parameters we want to use in the template on the Novu platform.
 
 ```js
 users.forEach((user) => {
     novu.trigger("test", {
-    $user_id: user.file,
-    $email: user.email,
-    name: user.name,
-    title: issue.title,
-    author: issue.author,
-    labels: issue.labels.join(", "),
-    url: issue.url,
+        to: {
+          subscriberId: user.email,
+          email: user.email,
+        },
+        payload: {
+          name: user.name,
+          title: issue.title,
+          author: issue.author,
+          labels: issue.labels.join(", "),
+          url: issue.url,
+        }
     });
 });
 ```

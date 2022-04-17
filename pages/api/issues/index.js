@@ -31,14 +31,18 @@ export default async function handler(req, res) {
     }));
 
     users.forEach((user) => {
-      novu.trigger("test", {
-        $user_id: user.file,
-        $email: user.email,
-        name: user.name,
-        title: issue.title,
-        author: issue.author,
-        labels: issue.labels.join(", "),
-        url: issue.url,
+      novu.trigger("eddie-test", {
+        to: {
+          subscriberId: user.email,
+          email: user.email,
+        },
+        payload: {
+          name: user.name,
+          title: issue.title,
+          author: issue.author,
+          labels: issue.labels.join(", "),
+          url: issue.url,
+        }
       });
     });
   }
