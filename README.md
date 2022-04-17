@@ -309,7 +309,7 @@ The email trigger needs the notification name for the first parameter then the 2
 
 ```js
 users.forEach((user) => {
-    novu.trigger("test", {
+    novu.trigger("good-first-issue", {
         to: {
           subscriberId: user.email,
           email: user.email,
