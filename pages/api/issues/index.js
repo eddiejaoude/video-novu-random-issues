@@ -31,7 +31,7 @@ export default async function handler(req, res) {
     }));
 
     users.forEach((user) => {
-      novu.trigger("eddie-test", {
+      novu.trigger("good-first-issue", {
         to: {
           subscriberId: user.email,
           email: user.email,
