@@ -251,7 +251,7 @@ At this time here are the supported providers...
 
 ![Novu providers](docs/images/2a-novu-integrations.png)
 
-Click on `Connect` for the provider you wish to integrate with. In my case I am using Mailgun and I fill in the private keys provided by Mailgun.
+Click on `Connect` for the provider you wish to integrate with. In my case I am using Mailjet and I fill in the private keys provided by Mailjet.
 
 ![Novu providers](docs/images/2b-novu-integration-keys.png)
 
