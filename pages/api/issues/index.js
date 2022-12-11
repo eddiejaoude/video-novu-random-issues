@@ -20,7 +20,7 @@ export default async function handler(req, res) {
     labels: item.labels.map((label) => label.name),
     url: item.html_url,
   }));
-  const random = Math.floor(Math.random() * (results.length + 1));
+  const random = Math.floor(Math.random() * (results.length - 1));
   const issue = results[random];
 
   if (send) {
